@@ -20,7 +20,23 @@
 
 ---
 
-## 📂 Project Structure
+## �️ Data Models
+
+### Mission (`missions`)
+The core entity representing a bounty or operation.
+*   **Core Brief:** Title, Objective, Target, Location.
+*   **Constraints:** Budget, Timeframe, Tone, Restrictions (JSON).
+*   **Status:** Draft -> Planned -> Critiqued.
+
+### PlanVersion (`plan_versions`)
+Stores AI-generated operational plans for a specific mission.
+*   **Versioning:** Allows multiple iterations of a plan for the same mission.
+*   **Content:** Summary, Structured Steps (Timeline), Risk Analysis.
+*   **Relationship:** One-to-Many (One Mission has many PlanVersions).
+
+---
+
+## �📂 Project Structure
 
 ```text
 guildops/
